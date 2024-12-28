@@ -1,0 +1,6 @@
+@use './styles/const' as *;
+
+html, body {
+  background-color: $white-color;
+  margin: 0;
+}

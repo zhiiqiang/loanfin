@@ -27,19 +27,27 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpg|gif)$/i,  // Rule for images
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[ext]',
-              outputPath: 'assets/',  // Output images to dist/assets
+              outputPath: 'assets/',
             },
           },
         ],
       },
     ],
-  },  
+  },
   devServer: {
     static: path.join(__dirname, 'dist'),
     port: 9000,
