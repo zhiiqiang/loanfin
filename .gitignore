@@ -1,0 +1,9 @@
+/node_modules
+/dist
+*.log
+.env
+package-lock.json
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
